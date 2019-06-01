@@ -1,0 +1,22 @@
+{
+  "pre-run": "npm i",
+  "scenarios": [
+    {
+      "name": "Vidiff-demo-website tour",
+      "entry": "test/visual-regression-test.js",
+      "browsers": [
+        {
+          "browsername": "chrome",
+          "platform": "WIN10",
+          "version": "74",
+          "screen-resolution": "1920x1080"
+        },
+        {
+          "browsername": "microsoftedge",
+          "platform": "WIN10",
+          "version": "18"
+        }
+      ]
+    }
+  ]
+}

@@ -5,7 +5,7 @@ function About() {
   return (
     <div className="About">
       <h1>
-        About
+        About this website
       </h1>
       <div>
         This app was created to demonstrate the capabilities of Vidiff, a URL visual diffing tool for automatic QA.

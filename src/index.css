@@ -1,0 +1,14 @@
+@import-normalize; /* bring in normalize.css styles */
+
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.App {
+  width: 80%;
+  margin: 16px auto 0 auto;
+}

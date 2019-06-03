@@ -1,6 +1,6 @@
 const assert = require('assert')
 
-module.exports = async (baseUrl, browser, takeScreenshot) => {
+module.exports = async (baseUrl, takeScreenshot, browser) => {
   let url
 
   await browser.url(baseUrl + '/')

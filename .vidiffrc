@@ -4,7 +4,7 @@
     {
       "name": "Vidiff-demo-website tour",
       "entry": "test/visual-regression-test.js",
-      "browsers": [
+      "capabilities": [
         {
           "browsername": "chrome",
           "platform": "WIN10",
@@ -12,9 +12,10 @@
           "screen-resolution": "1920x1080"
         },
         {
-          "browsername": "microsoftedge",
-          "platform": "WIN10",
-          "version": "18"
+          "browsername": "chrome",
+          "platform": "VISTA",
+          "version": "74",
+          "screen-resolution": "1920x1080"
         }
       ]
     }

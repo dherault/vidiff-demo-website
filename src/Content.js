@@ -20,6 +20,7 @@ function Content() {
       <img
         alt="elephant"
         width="800"
+        id="elephant"
         src="https://petapixel.com/assets/uploads/2019/06/Selengei-Poole-Granli-Tim-and-friends-Amboseli.jpg"
       />
     </div>

@@ -41,7 +41,11 @@ module.exports = async (baseUrl, takeScreenshot, browser) => {
   await contentLink.click()
 
   url = await browser.getUrl()
-  assert(url === baseUrl + '/content')
+  assert(url === baseUrl + '/content-changed')
 
-  await takeScreenshot('content')
+  const elephantImage = await browser.$('#elephant')
+
+  await elephantImage.scrollIntoView()
+
+  await takeScreenshot('content changed')
 }

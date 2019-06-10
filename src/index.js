@@ -5,6 +5,7 @@ import './index.css'
 
 import Home from './Home'
 import About from './About'
+import Content from './Content'
 import Signin from './Signin'
 
 function App() {
@@ -24,6 +25,9 @@ function App() {
             <li>
               <Link to="/about">About</Link>
             </li>
+            <li>
+              <Link to="/content">Content</Link>
+            </li>
             {isUserSignedIn && (
               <li>
                 <Link to="/signin" onClick={() => setIsUserSignedIn(false)}>Sign out</Link>
@@ -34,6 +38,7 @@ function App() {
 
         <Route exact path="/" render={protectRoute(Home)} />
         <Route exact path="/about" render={protectRoute(About)} />
+        <Route exact path="/content" render={protectRoute(Content)} />
         <Route exact path="/signin" render={props => <Signin {...props} setIsUserSignedIn={setIsUserSignedIn} />} />
       </div>
     </Router>

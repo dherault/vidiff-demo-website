@@ -1,8 +1,7 @@
 {
-  "pre-run": "npm i",
   "scenarios": [
     {
-      "name": "Vidiff-demo-website tour",
+      "name": "Website tour",
       "entry": "test/visual-regression-test.js",
       "capabilities": [
         {
@@ -12,10 +11,21 @@
           "screen-resolution": "1920x1080"
         },
         {
-          "browsername": "chrome",
-          "platform": "VISTA",
-          "version": "74",
-          "screen-resolution": "1920x1080"
+          "browsername": "safari",
+          "platform": "MOJAVE",
+          "version": "12",
+          "screen-resolution": "2360x1770"
+        },
+        {
+          "browsername": "internet explorer",
+          "platform": "WIN10",
+          "version": "11"
+        },
+        {
+          "browsername": "firefox",
+          "platform": "LINUX",
+          "version": "dev",
+          "screen-resolution": "800x600"
         }
       ]
     }

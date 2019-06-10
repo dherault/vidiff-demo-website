@@ -1,9 +1,17 @@
 const assert = require('assert')
 
+function wait(duration) {
+  return new Promise(resolve => {
+    setTimeout(resolve, duration)
+  })
+}
+
 module.exports = async (baseUrl, takeScreenshot, browser) => {
   let url
 
   await browser.url(baseUrl + '/')
+
+  await wait(1500)
 
   url = await browser.getUrl()
   assert(url === baseUrl + '/signin')
@@ -39,6 +47,8 @@ module.exports = async (baseUrl, takeScreenshot, browser) => {
   const contentLink = await browser.$('nav>ul>li:nth-child(3)>a')
 
   await contentLink.click()
+
+  await wait(1500)
 
   url = await browser.getUrl()
   assert(url === baseUrl + '/content-changed')

@@ -26,7 +26,7 @@ function App() {
               <Link to="/about">About</Link>
             </li>
             <li>
-              <Link to="/content">Content</Link>
+              <Link to="/content-changed">Content</Link>
             </li>
             {isUserSignedIn && (
               <li>
@@ -38,7 +38,7 @@ function App() {
 
         <Route exact path="/" render={protectRoute(Home)} />
         <Route exact path="/about" render={protectRoute(About)} />
-        <Route exact path="/content" render={protectRoute(Content)} />
+        <Route exact path="/content-changed" render={protectRoute(Content)} />
         <Route exact path="/signin" render={props => <Signin {...props} setIsUserSignedIn={setIsUserSignedIn} />} />
       </div>
     </Router>

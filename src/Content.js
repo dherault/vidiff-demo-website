@@ -17,6 +17,11 @@ function Content() {
         width="800"
         src="http://www.krugerpark.co.za/images/1-lion-charge-gc590a.jpg"
       />
+      <img
+        alt="elephant"
+        width="800"
+        src="https://petapixel.com/assets/uploads/2019/06/Selengei-Poole-Granli-Tim-and-friends-Amboseli.jpg"
+      />
     </div>
   )
 }

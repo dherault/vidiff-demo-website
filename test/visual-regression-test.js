@@ -16,7 +16,7 @@ module.exports = async (baseUrl, takeScreenshot, browser) => {
   await emailInput.setValue('user@vidiff.com')
   await passwordInput.setValue('carrotcake')
 
-  await takeScreenshot('signin - filled')
+  await takeScreenshot('signin - filled', 'We filled the inputs with valid data')
 
   const submitButton = await browser.$('.Signin-submit')
 
@@ -34,5 +34,14 @@ module.exports = async (baseUrl, takeScreenshot, browser) => {
   url = await browser.getUrl()
   assert(url === baseUrl + '/about')
 
-  await takeScreenshot('about')
+  await takeScreenshot('about', 'The about page')
+
+  const contentLink = await browser.$('nav>ul>li:nth-child(3)>a')
+
+  await contentLink.click()
+
+  url = await browser.getUrl()
+  assert(url === baseUrl + '/content')
+
+  await takeScreenshot('content')
 }

@@ -7,25 +7,14 @@
         {
           "browsername": "chrome",
           "platform": "WIN10",
-          "version": "74",
+          "version": "75",
           "screen-resolution": "1920x1080"
         },
         {
-          "browsername": "safari",
-          "platform": "MOJAVE",
-          "version": "12",
-          "screen-resolution": "2360x1770"
-        },
-        {
-          "browsername": "microsoftedge",
-          "platform": "WIN10",
-          "version": "18"
-        },
-        {
-          "browsername": "firefox",
-          "platform": "LINUX",
-          "version": "dev",
-          "screen-resolution": "800x600"
+          "browsername": "chrome",
+          "platform": "VISTA",
+          "version": "75",
+          "screen-resolution": "1920x1080"
         }
       ]
     }

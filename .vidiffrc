@@ -17,9 +17,9 @@
           "screen-resolution": "2360x1770"
         },
         {
-          "browsername": "internet explorer",
+          "browsername": "microsoftedge",
           "platform": "WIN10",
-          "version": "11"
+          "version": "18"
         },
         {
           "browsername": "firefox",

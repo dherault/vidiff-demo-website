@@ -9,48 +9,48 @@ function wait(duration) {
 module.exports = async (baseUrl, takeScreenshot, browser) => {
   let url
 
-  await browser.url(baseUrl + '/')
+  await browser.get(baseUrl + '/')
 
-  await wait(1500)
-
-  url = await browser.getUrl()
+  url = await browser.url()
   assert(url === baseUrl + '/signin')
 
   await takeScreenshot('signin - blank')
 
-  const emailInput = await browser.$('#email')
-  const passwordInput = await browser.$('#password')
+  const emailInput = await browser.elementByCssSelector('#email')
+  const passwordInput = await browser.elementByCssSelector('#password')
 
-  await emailInput.setValue('user@vidiff.com')
-  await passwordInput.setValue('carrotcake')
+  await emailInput.type('user@vidiff.com'.split(''))
+  await passwordInput.type('carrotcake'.split(''))
 
   await takeScreenshot('signin - filled', 'We filled the inputs with valid data')
 
-  const submitButton = await browser.$('.Signin-submit')
+  const submitButton = await browser.elementByCssSelector('.Signin-submit')
 
   await submitButton.click()
 
-  url = await browser.getUrl()
+  url = await browser.url()
   assert(url === baseUrl + '/')
+
+  await wait(1000)
 
   await takeScreenshot('home')
 
-  const aboutLink = await browser.$('nav>ul>li:nth-child(2)>a')
+  const aboutLink = await browser.elementByCssSelector('nav>ul>li:nth-child(2)>a')
 
   await aboutLink.click()
 
-  url = await browser.getUrl()
+  url = await browser.url()
   assert(url === baseUrl + '/about')
 
   await takeScreenshot('about', 'The about page')
 
-  const contentLink = await browser.$('nav>ul>li:nth-child(3)>a')
+  const contentLink = await browser.elementByCssSelector('nav>ul>li:nth-child(3)>a')
 
   await contentLink.click()
 
-  await wait(1500)
+  await wait(1000)
 
-  url = await browser.getUrl()
+  url = await browser.url()
   assert(url === baseUrl + '/content')
 
   await takeScreenshot('content')

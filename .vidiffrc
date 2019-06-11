@@ -15,6 +15,18 @@
           "platform": "VISTA",
           "version": "75",
           "screen-resolution": "1920x1080"
+        },
+        {
+          "browsername": "microsoftedge",
+          "platform": "WIN10",
+          "version": "18",
+          "screen-resolution": "1920x1080"
+        },
+        {
+          "browsername": "firefox",
+          "platform": "LINUX",
+          "version": "67",
+          "screen-resolution": "1920x1080"
         }
       ]
     }

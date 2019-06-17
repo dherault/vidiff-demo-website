@@ -6,7 +6,7 @@ function wait(duration) {
   })
 }
 
-module.exports = async (baseUrl, takeScreenshot, browser) => {
+module.exports = async (browser, takeScreenshot, baseUrl) => {
   let url
 
   await browser.get(baseUrl + '/')

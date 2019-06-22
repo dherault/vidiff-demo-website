@@ -10,7 +10,7 @@ module.exports = async (browser, takeScreenshot, baseUrl, log) => {
   let url
 
   log('Using the log function')
-  log(JSON.stringify(process.env))
+  // log(JSON.stringify(process.env, null, 2))
 
   await browser.get(baseUrl + '/')
 

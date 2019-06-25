@@ -36,6 +36,8 @@ module.exports = async (browser, takeScreenshot, baseUrl, log) => {
   url = await browser.url()
   assert(url === baseUrl + '/')
 
+  await wait(1000)
+
   await takeScreenshot('home')
 
   const aboutLink = await browser.elementByCssSelector('nav>ul>li:nth-child(2)>a')

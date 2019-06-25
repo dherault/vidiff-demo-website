@@ -1,4 +1,4 @@
-# vidiff-demo-website
+# Vidiff demo website
 
 A demo website for Vidiff
 

@@ -23,19 +23,24 @@ module.exports = async (browser, takeScreenshot, baseUrl, log, capability) => {
 
   await takeScreenshot('signin - blank')
 
-  const emailInput = await browser.elementByCssSelector('#email')
-  const passwordInput = await browser.elementByCssSelector('#password')
-
-  await emailInput.type('user@vidiff.com'.split(''))
-  await passwordInput.type('carrotcake'.split(''))
-
   // https://github.com/appium/appium/issues/9002
   if (capability.platformName === 'iOS') {
-    browser.execute(`
-      const event = new Event('change');
-      document.querySelector('#email').dispatchEvent(event);
-      document.querySelector('#password').dispatchEvent(event);
+    await browser.execute(`
+      const event = new Event('change', { bubbles: true });
+      const email = document.querySelector('#email');
+      const password = document.querySelector('#password');
+      Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, "value").set.call(email, 'user@vidiff.com');
+      Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, "value").set.call(password, 'carrotcake');
+      email.dispatchEvent(event);
+      password.dispatchEvent(event);
     `);
+  }
+  else {
+    const emailInput = await browser.elementByCssSelector('#email')
+    const passwordInput = await browser.elementByCssSelector('#password')
+
+    await emailInput.type('user@vidiff.com'.split(''))
+    await passwordInput.type('carrotcake'.split(''))
   }
 
   await takeScreenshot('signin - filled', 'We filled the inputs with valid data')

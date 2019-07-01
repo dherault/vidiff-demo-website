@@ -31,8 +31,11 @@ module.exports = async (browser, takeScreenshot, baseUrl, log, capability) => {
 
   // https://github.com/appium/appium/issues/9002
   if (capability.platformName === 'iOS') {
-    browser.execute(triggerReactChange, '#email');
-    browser.execute(triggerReactChange, '#password');
+    browser.execute(`
+      const event = new Event('change');
+      document.querySelector('#email').dispatchEvent(event);
+      document.querySelector('#password').dispatchEvent(event);
+    `);
   }
 
   await takeScreenshot('signin - filled', 'We filled the inputs with valid data')

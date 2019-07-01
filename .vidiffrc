@@ -5,7 +5,6 @@
   },
   "scenarios": [
     {
-      "name": "Website tour",
       "entry": "test/visual-regression-test.js",
       "capabilities": [
         {

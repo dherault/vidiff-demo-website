@@ -26,13 +26,13 @@ module.exports = async (browser, takeScreenshot, baseUrl, log, capability) => {
   // https://github.com/appium/appium/issues/9002
   if (capability.platformName === 'iOS') {
     await browser.execute(`
-      const event = new Event('change', { bubbles: true });
       const email = document.querySelector('#email');
       const password = document.querySelector('#password');
-      Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, "value").set.call(email, 'user@vidiff.com');
-      Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, "value").set.call(password, 'carrotcake');
-      email.dispatchEvent(event);
-      password.dispatchEvent(event);
+      const setValue = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, "value").set;
+      setValue.call(email, 'user@vidiff.com');
+      setValue.call(password, 'carrotcake');
+      email.dispatchEvent(new Event('change', { bubbles: true }));
+      password.dispatchEvent(new Event('change', { bubbles: true }));
     `);
   }
   else {

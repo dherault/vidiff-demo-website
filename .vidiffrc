@@ -19,9 +19,9 @@
         {
           "platform": "ANDROID",
           "platformName": "Android",
-          "deviceName": "Pixel C",
+          "deviceName": "Pixel 2",
           "browserName": "Chrome",
-          "version": "8.0"
+          "version": "7.1"
         }
       ]
     }

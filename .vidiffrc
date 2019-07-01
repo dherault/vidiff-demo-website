@@ -2,7 +2,7 @@
   "branchToUrlMapping": {
     "master": "https://master.demo.vidiff.com",
     "dev": "https://dev.demo.vidiff.com",
-    "safari": "https://master.demo.vidiff.com"
+    "internet-explorer": "https://master.demo.vidiff.com"
   },
   "scenarios": [
     {
@@ -10,9 +10,9 @@
       "entry": "test/visual-regression-test.js",
       "capabilities": [
         {
-          "browsername": "safari",
-          "platform": "MOJAVE",
-          "version": "12"
+          "browsername": "internet explorer",
+          "platform": "WIN10",
+          "version": "11"
         }
       ]
     }

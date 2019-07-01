@@ -1,7 +1,8 @@
 {
   "branchToUrlMapping": {
     "master": "https://master.demo.vidiff.com",
-    "dev": "https://dev.demo.vidiff.com"
+    "dev": "https://dev.demo.vidiff.com",
+    "mobile-devices": "https://master.demo.vidiff.com"
   },
   "scenarios": [
     {

@@ -22,8 +22,8 @@ function Signin({ history, setIsUserSignedIn }) {
       history.push('/')
     }
     else {
-      setEmail('')
-      setPassword('')
+      // setEmail('')
+      // setPassword('')
       setWarning(true)
     }
   }
@@ -60,7 +60,7 @@ function Signin({ history, setIsUserSignedIn }) {
         )}
       </form>
       <div>
-        The email is {correctEmail} and the password is {correctPassword}.
+        The email is {correctEmail} and the password is {correctPassword}. You entered {email} - {password}
       </div>
     </div>
   )

@@ -14,6 +14,9 @@ function Signin({ history, setIsUserSignedIn }) {
   const handleSubmit = event => {
     event.preventDefault()
 
+    console.log('email', email)
+    console.log('password', password)
+
     if (email === correctEmail && password === correctPassword) {
       setIsUserSignedIn(true)
       history.push('/')

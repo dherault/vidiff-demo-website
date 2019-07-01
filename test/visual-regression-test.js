@@ -9,7 +9,9 @@ function wait(duration) {
 module.exports = async (browser, takeScreenshot, baseUrl) => {
   let url
 
-  await browser.get(baseUrl + '/')
+  await browser.get(baseUrl)
+
+  await wait(3000)
 
   url = await browser.url()
   assert(url === baseUrl + '/signin')
@@ -21,6 +23,8 @@ module.exports = async (browser, takeScreenshot, baseUrl) => {
 
   await emailInput.type('user@vidiff.com'.split(''))
   await passwordInput.type('carrotcake'.split(''))
+
+  await wait(3000)
 
   await takeScreenshot('signin - filled', 'We filled the inputs with valid data')
 

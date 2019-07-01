@@ -6,7 +6,7 @@
   "scenarios": [
     {
       "name": "Website tour",
-      "entry": "test/visual-regression-test.js",
+      "entry": "invalid/path/visual-regression-test.js",
       "capabilities": [
         {
           "browsername": "chrome",

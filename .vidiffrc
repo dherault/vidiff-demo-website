@@ -1,4 +1,5 @@
 {
+  malformed JSON
   "branchToUrlMapping": {
     "master": "https://master.demo.vidiff.com",
     "dev": "https://dev.demo.vidiff.com"

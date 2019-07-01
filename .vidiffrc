@@ -12,7 +12,7 @@
         {
           "platform": "MOJAVE",
           "platformName": "iOS",
-          "deviceName": "iPhone 6",
+          "deviceName": "iPhone Xs",
           "browserName": "safari",
           "version": "12.2"
         },

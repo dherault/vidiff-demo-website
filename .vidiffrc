@@ -9,28 +9,9 @@
       "entry": "test/visual-regression-test.js",
       "capabilities": [
         {
-          "browsername": "chrome",
-          "platform": "WIN10",
-          "version": "75",
-          "screen-resolution": "1920x1080"
-        },
-        {
-          "browsername": "chrome",
-          "platform": "VISTA",
-          "version": "75",
-          "screen-resolution": "1920x1080"
-        },
-        {
-          "browsername": "microsoftedge",
-          "platform": "WIN10",
-          "version": "18",
-          "screen-resolution": "1920x1080"
-        },
-        {
-          "browsername": "firefox",
-          "platform": "LINUX",
-          "version": "67",
-          "screen-resolution": "1920x1080"
+          "browsername": "safari",
+          "platform": "MOJAVE",
+          "version": "12"
         }
       ]
     }

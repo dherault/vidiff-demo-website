@@ -11,7 +11,7 @@ function triggerReactChange(elementSelector) {
   document.querySelector(elementSelector).dispatchEvent(event);
 }
 
-module.exports = async (browser, takeScreenshot, baseUrl) => {
+module.exports = async (browser, takeScreenshot, baseUrl, log, capability) => {
   let url
 
   await browser.get(baseUrl)
@@ -30,7 +30,7 @@ module.exports = async (browser, takeScreenshot, baseUrl) => {
   await passwordInput.type('carrotcake'.split(''))
 
   // https://github.com/appium/appium/issues/9002
-  if (browser.platformName === 'iOS') {
+  if (capability.platformName === 'iOS') {
     browser.execute(triggerReactChange, '#email');
     browser.execute(triggerReactChange, '#password');
   }

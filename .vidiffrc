@@ -1,4 +1,8 @@
 {
+  branchToUrlMapping: {
+    "master": "https://master.demo.vidiff.com",
+    "dev": "https://dev.demo.vidiff.com"
+  },
   "scenarios": [
     {
       "name": "Website tour",

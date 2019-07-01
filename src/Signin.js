@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './Signin.css'
 
 const correctEmail = 'user@vidiff.com'
@@ -10,12 +10,8 @@ function Signin({ history, setIsUserSignedIn }) {
   const [password, setPassword] = useState('');
   const [warning, setWarning] = useState(false);
 
-
   const handleSubmit = event => {
     event.preventDefault()
-
-    console.log('email', email)
-    console.log('password', password)
 
     if (email === correctEmail && password === correctPassword) {
       setIsUserSignedIn(true)

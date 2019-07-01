@@ -6,6 +6,11 @@ function wait(duration) {
   })
 }
 
+function triggerReactChange(elementSelector) {
+  const event = new Event('change');
+  document.querySelector(elementSelector).dispatchEvent(event);
+}
+
 module.exports = async (browser, takeScreenshot, baseUrl) => {
   let url
 
@@ -24,7 +29,11 @@ module.exports = async (browser, takeScreenshot, baseUrl) => {
   await emailInput.type('user@vidiff.com'.split(''))
   await passwordInput.type('carrotcake'.split(''))
 
-  await wait(3000)
+  // https://github.com/appium/appium/issues/9002
+  if (browser.platformName === 'iOS') {
+    browser.execute(triggerReactChange, '#email');
+    browser.execute(triggerReactChange, '#password');
+  }
 
   await takeScreenshot('signin - filled', 'We filled the inputs with valid data')
 

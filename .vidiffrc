@@ -19,9 +19,9 @@
         {
           "platform": "ANDROID",
           "platformName": "Android",
-          "deviceName": "Galaxy S6",
-          "browserName": "browser",
-          "version": "6.0"
+          "deviceName": "Pixel C",
+          "browserName": "Chrome",
+          "version": "8.0"
         }
       ]
     }

@@ -6,7 +6,7 @@ function wait(duration) {
   })
 }
 
-module.exports = async (browser, takeScreenshot, baseUrl, log) => {
+module.exports = async (browser, baseUrl, log) => {
   let url
 
   log('Using the log function')
@@ -19,7 +19,7 @@ module.exports = async (browser, takeScreenshot, baseUrl, log) => {
   url = await browser.url()
   assert(url === baseUrl + '/signin')
 
-  await takeScreenshot('signin - blank')
+  await browser.takeScreenshot('signin - blank')
 
   const emailInput = await browser.elementByCssSelector('#email')
   const passwordInput = await browser.elementByCssSelector('#password')
@@ -27,7 +27,7 @@ module.exports = async (browser, takeScreenshot, baseUrl, log) => {
   await emailInput.type('user@vidiff.com'.split(''))
   await passwordInput.type('carrotcake'.split(''))
 
-  await takeScreenshot('signin - filled', 'We filled the inputs with valid data')
+  await browser.takeScreenshot('signin - filled', 'We filled the inputs with valid data')
 
   const submitButton = await browser.elementByCssSelector('.Signin-submit')
 
@@ -38,7 +38,7 @@ module.exports = async (browser, takeScreenshot, baseUrl, log) => {
 
   await wait(1000)
 
-  await takeScreenshot('home')
+  await browser.takeScreenshot('home')
 
   const aboutLink = await browser.elementByCssSelector('nav>ul>li:nth-child(2)>a')
 
@@ -47,7 +47,7 @@ module.exports = async (browser, takeScreenshot, baseUrl, log) => {
   url = await browser.url()
   assert(url === baseUrl + '/about')
 
-  await takeScreenshot('about', 'The about page')
+  await browser.takeScreenshot('about', 'The about page')
 
   const contentLink = await browser.elementByCssSelector('nav>ul>li:nth-child(3)>a')
 
@@ -56,5 +56,5 @@ module.exports = async (browser, takeScreenshot, baseUrl, log) => {
   url = await browser.url()
   assert(url === baseUrl + '/content-changed')
 
-  await takeScreenshot('content changed')
+  await browser.takeScreenshot('content changed')
 }

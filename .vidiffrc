@@ -21,7 +21,8 @@
         {
           "platform": "LINUX",
           "browserName": "firefox",
-          "version": "67"
+          "version": "67",
+          "screen-resolution": "800x600"
         },
         {
           "platform": "WIN10",

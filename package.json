@@ -13,8 +13,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "sync-s3": "aws s3 sync build/ s3://master.demo.vidiff.com --region eu-west-3",
-    "invalidate-cloudfront": "aws cloudfront create-invalidation --distribution-id EMV1HJETDNX1W --paths \"/*\"",
+    "edit": "echo 'Edit' >> README.md && git add . -A && git commit -m 'test commit' && git push",
+    "sync-s3": "aws s3 sync build/ s3://dev.demo.vidiff.com --region eu-west-3",
+    "invalidate-cloudfront": "aws cloudfront create-invalidation --distribution-id EZXIPA6K67NS9 --paths \"/*\"",
     "deploy": "npm run sync-s3 && npm run invalidate-cloudfront",
     "build-deploy": "npm run build && npm run deploy"
   },

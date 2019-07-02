@@ -9,28 +9,36 @@
       "entry": "test/visual-regression-test.js",
       "capabilities": [
         {
-          "browsername": "chrome",
           "platform": "WIN10",
-          "version": "75",
-          "screen-resolution": "1920x1080"
+          "browserName": "chrome",
+          "version": "75"
         },
         {
-          "browsername": "chrome",
-          "platform": "VISTA",
-          "version": "75",
-          "screen-resolution": "1920x1080"
+          "platform": "MOJAVE",
+          "browserName": "safari",
+          "version": "12"
         },
         {
-          "browsername": "microsoftedge",
-          "platform": "WIN10",
-          "version": "18",
-          "screen-resolution": "1920x1080"
-        },
-        {
-          "browsername": "firefox",
           "platform": "LINUX",
-          "version": "67",
-          "screen-resolution": "1920x1080"
+          "browserName": "firefox",
+          "version": "67"
+        },
+        {
+          "platform": "WIN10",
+          "browserName": "microsoftedge",
+          "version": "18"
+        },
+        {
+          "platform": "VISTA",
+          "browserName": "internet explorer",
+          "version": "11"
+        },
+        {
+          "platform": "ANDROID",
+          "platformName": "Android",
+          "deviceName": "Pixel 2",
+          "browserName": "Chrome",
+          "version": "7.1"
         }
       ]
     }

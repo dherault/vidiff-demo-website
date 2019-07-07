@@ -10,25 +10,25 @@
       "entry": "invalid/path/visual-regression-test.js",
       "capabilities": [
         {
-          "browsername": "chrome",
+          "browserName": "chrome",
           "platform": "WIN10",
           "version": "75",
           "screen-resolution": "1920x1080"
         },
         {
-          "browsername": "chrome",
+          "browserName": "chrome",
           "platform": "VISTA",
           "version": "75",
           "screen-resolution": "1920x1080"
         },
         {
-          "browsername": "microsoftedge",
+          "browserName": "microsoftedge",
           "platform": "WIN10",
           "version": "18",
           "screen-resolution": "1920x1080"
         },
         {
-          "browsername": "firefox",
+          "browserName": "firefox",
           "platform": "LINUX",
           "version": "67",
           "screen-resolution": "1920x1080"
